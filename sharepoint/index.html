@@ -1,0 +1,559 @@
+<script src="https://kit.fontawesome.com/22dd5ae76f.js" crossorigin="anonymous"></script>
+<style>
+
+	.section-id {
+		position: relative;
+		float: left;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		width: 160px;
+		height: 160px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		box-shadow: 5px 3px 10px grey;
+		border-radius: 3px;
+		cursor: pointer;
+		
+	}
+	
+
+
+	a.box-title {
+		border-top-right-radius: 3px;
+		border-top-left-radius: 3px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 160px;
+		background-color: white;
+		color: #414042;
+		line-height: 20px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: 0.3s;
+		text-align: center;
+		height: 130px;
+	}
+	
+	a:hover.box-title {
+		background-color: #205493 ;
+		color: #FFF;
+	}
+	
+	a.intra-box {
+		border-bottom-left-radius: 3px;
+		position: absolute;
+		left: 0;
+		top: 120px;
+		width: 80px;
+		background-color: whitesmoke;
+		color: #414042;
+		line-height: 40px;
+		text-align: center;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+	
+	a:hover.intra-box {
+		background-color: #205493 ;
+		color: #FFF;
+	}
+	
+	a.policy-box {
+		border-bottom-right-radius: 3px;
+		position: absolute;
+		left: 80px;
+		top: 120px;
+		width: 80px;
+		background-color: whitesmoke;
+		color: #414042;
+		line-height: 40px;
+		text-align: center;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+	
+	a:hover.policy-box {
+		background-color: #205493 ;
+		color: #FFF;
+	}
+	
+	/*--- drop menu ---*/
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 100px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+</style>
+
+<div style="min-width: 1080px; margin-left: 20px; margin-top: 20px;">
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fas fa-city fa-3x"></i><br />AD<br />East Bay</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fad fa-fighter-jet fa-3x"></i><br />AD<br />Sacramento Valley</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="" class="box-title"><br /><i class="fas fa-syringe fa-3x"></i><br /><br />Anesthesiology</a>
+	<a href="" class="intra-box">Intranet</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fas fa-assistive-listening-systems fa-3x"></i><br /><br />Audio &amp; Speech</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	
+		<span onclick="openNav()">&#9776;<a href="javascript:void(0)" class="box-title"><br /><i class="fas fa-database fa-3x"></i><br /><br />BDMS</a></span>
+	<div id="myNav" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<a href="">BDMS</a>
+			<a href="">Admitting &amp; Inpatient</a>
+			<a href="">Ambulatory Care</a>
+			<a href="">Health Information</a>
+			<a href="">Performance Improvement</a>
+    	</div>
+	</div>
+	
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+
+	</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fas fa-users fa-3x"></i><br /><br />Chief of Staff</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sites/VHANCal/clc" class="box-title"><br /><i class="fas fa-user-friends fa-3x"></i><br />
+	Community<br />Living Center</a>
+	<a href="" class="intra-box">Intranet</a>
+	<a class="policy-box">&nbsp;</a>
+</div>
+
+<div class="section-id">
+	<a href="" class="box-title"><br /><i class="fas fa-money-bill-wave fa-3x"></i><br />Compensation<br />and Pension</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fas fa-business-time fa-3x"></i><br />Compliance &amp;<br /> Business</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="far fa-smile-beam fa-3x"></i><br /><br />Customer Service</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fas fa-tooth fa-3x"></i><br /><br />Dental</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fas fa-radiation fa-3x"></i><br />Diagnostic<br />Radiology</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="" class="box-title"><br /><i class="fas fa-sitemap fa-3x"></i><br /><br />Director's Office</a>
+	<a href="" class="intra-box">Intranet</a>
+	<a href="/sites/VHANCal/sop/SitePages/000.aspx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="" class="box-title"><br /><i class="fas fa-apple-alt fa-3x"></i><br /><br />Education</a>
+	<a href="" class="intra-box">Intranet</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sl/ED" class="box-title"><br /><i class="fas fa-ambulance fa-3x"></i><br />Emergency<br />Department</a>
+	<a href="hydept/" class="intra-box">Intranet</a>
+	<a href="#" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/site" class="box-title"><br /><i class="fad fa-hospitals fa-3x"></i><br />Emergency<br /> Management</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="#" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="https" class="box-title"><br /><i class="fas fa-spa fa-3x"></i><br /><br />Employee Wellness</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="h" class="policy-box">Policies</a>
+</div>	
+	
+<div class="section-id">
+	
+		<span onclick="openNav1()">&#9776;<a href="#" class="box-title"><br /><i class="fas fa-drafting-compass fa-3x"></i><br /><br />Engineering</a></span>
+<div id="myNav1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+  <div class="overlay-content">
+		<a href="/site/efms"><i class="fas fa-tools fa-lg"></i> Engineering</a>
+		<a href="/sitesed"><i class="fas fa-biohazard fa-lg"></i> Biomedical Engineering</a>
+		<a href="/sites/VHANCal/efms/id"><i class="fas fa-pencil-ruler fa-lg"></i> Interior Design</a>
+		<a href="/sitems/ops"><i class="fas fa-toolbox fa-lg"></i> Maintenance &amp; Operations</a>
+		<a href="/sitepairs"> <i class="fas fa-hammer fa-lg"></i> Maintenance &amp; Repairs</a>
+		<a href="/sihief"><i class="fas fa-user-tie fa-lg"></i> Office of the Chief</a>
+		<a href="/sitojects"><i class="fas fa-project-diagram fa-lg"></i> Projects</a>
+		<a href="/sitportation"><i class="fas fa-shuttle-van fa-lg"></i> Transportation SVD</a>
+  </div>
+</div>
+
+	<a href="httering/" class="intra-box">Intranet</a>
+	<a href="/sitpx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fab fa-envira fa-3x"></i><br />Environmental<br />Management</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="/sipx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fas fa-equals fa-3x"></i><br /><br />EEO</a>
+	<a href="hEO/" class="intra-box">Intranet</a>
+	<a href="/sitpx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="#" class="box-title"><br /><i class="far fa-eye fa-3x"></i><br /><br />Eye Clinic</a>
+	<a href="hml" class="intra-box">Intranet</a>
+	<a href="#" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sites/VHANCal/fiscal" class="box-title"><br /><i class="fas fa-dollar-sign fa-3x"></i><br /><br />Fiscal</a>
+	<a href="cal/" class="intra-box">Intranet</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="" class="box-title"><br /><i class="fas fa-hand-sparkles fa-3x"></i><br /><br />Housekeeping</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="#" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	
+		<span onclick="openNav2()">&#9776;<a href="#" class="box-title"><br /><i class="fas fa-fingerprint fa-3x"></i><br /><br />Human Resources</a></span>
+<div id="myNav2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  <div class="overlay-content">
+	
+      	<a href="">Human Resources</a>
+		<a href="">Occupational Health</a>
+      	<a href="">Job Vacancies</a>
+	
+  </div>
+</div>	
+	<a href="" class="intra-box">Intranet</a>
+	<a href="" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="" class="box-title"><br /><i class="fas fa-viruses fa-3x"></i><br /><br />Infection Control</a>
+	<a href="" class="intra-box">Intranet</a>
+	<a href="#" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/t" class="box-title"><br /><i class="fas fa-shield-alt fa-3x"></i><br />Information<br />Security</a>
+	<a href="ht" class="intra-box">Intranet</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/t" class="box-title"><br /><i class="fas fa-chalkboard-teacher fa-3x"></i><br /><br />IT Operations</a>
+	<a href="httes/irm/" class="intra-box">Intranet</a>
+	<a href="/px" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/ics" class="box-title"><br /><i class="fas fa-warehouse fa-3x"></i><br /><br />Logistics</a>
+	<a href="hcs/" class="intra-box">Intranet</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/se" class="box-title"><br /><i class="fas fa-clinic-medical fa-3x"></i><br /><br />Medical</a>
+	<a href="hterv/" class="intra-box">Intranet</a>
+	<a href="/sx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/siine" class="box-title"><br /><i class="fas fa-book-medical fa-3x"></i><br /><br />Medical Library</a>
+	<a href="httlib/" class="intra-box">Intranet</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+
+<div class="section-id">
+	<a href="httpe.aspx" class="box-title"><br /><i class="fas fa-head-side-virus fa-3x"></i><br /><br /> Mental Health</a>
+	<a href="httmhc/" class="intra-box">Intranet</a>
+	<a href="/sipx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="htpx" class="box-title"><br /><i class="fas fa-brain fa-3x"></i><br /><br />Neurology</a>
+	<a href="htgy/" class="intra-box">Intranet</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sg" class="box-title"><br /><i class="fas fa-user-nurse fa-3x"></i><br /><br />Nursing</a>
+	<a href="htting/" class="intra-box">Intranet</a>
+	<a href="/sispx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sion" class="box-title"><br /><i class="fad fa-salad fa-3x"></i><br /><br />Nutrition</a>
+	<a href="htttml" class="intra-box">Intranet</a>
+	<a href="#" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sb" class="box-title"><br /><i class="fas fa-vials fa-3x"></i><br />Pathology &amp;<br />Laboratory</a>
+	<a href="htms/" class="intra-box">Intranet</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/seo" class="box-title"><br /><i class="fas fa-user-injured fa-3x"></i><br /><br />Patient Services</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="/sitspx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sios" class="box-title"><br /><i class="fas fa-procedures fa-3x"></i><br />Perioperative<br />Services</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="#" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/scy" class="box-title"><br /><i class="fas fa-prescription fa-3x"></i><br /><br />Pharmacy</a>
+	<a href="htrm/" class="intra-box">Intranet</a>
+	<a href="/sispx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="httpx" class="box-title"><br /><i class="fas fa-running fa-3x"></i><br /><br />Physical Medicine</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="/sitspx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sing" class="box-title"><br /><i class="fas fa-route fa-3x"></i><br /><br />Planning</a>
+
+	<a href="httning/" class="intra-box">Intranet</a>
+	<a href="/six" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sice" class="box-title"><br /><i class="far fa-siren-on fa-3x"></i><br /><br />Police</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="/sitspx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sish" class="box-title"><br /><i class="fas fa-gavel fa-3x"></i><br /><br />Policies </a>
+	<a href="httml" class="intra-box">Intranet</a>
+	<a href="/sispx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sites/VHANCal/pc" class="box-title"><br /><i class="fad fa-hospital-user fa-3x"></i><br /><br />Primary Care</a>
+	<a class="intra-box">&nbsp;</a>
+	<a class="policy-box">&nbsp;</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fad fa-blinds-open fa-3x"></i><br /><br />Privacy FOIA</a>
+	<a href="httvacy/" class="intra-box">Intranet</a>
+	<a href="/sspx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fad fa-crutches fa-3x"></i><br />Prosthetics &amp;<br />Sensory Aid</a>
+	<a href="htttics/" class="intra-box">Intranet</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="httwform" class="box-title"><br /><i class="fas fa-podium-star fa-3x"></i><br /><br /> Public Affairs</a>
+	<a href="httpa/" class="intra-box">Intranet</a>
+	<a href="/sispx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a class="box-title"><br /><i class="fas fa-cart-plus fa-3x"></i><br /><br />Purchased Care</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	
+		<span onclick="openNav3()">&#9776;<a href="#" class="box-title"><br /><i class="fad fa-check-square fa-3x"></i><br />Quality<br />Management</a></span>
+<div id="myNav3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+  <div class="overlay-content">
+	
+		<a href="/sty">Quality Management</a>
+		<a href="/sitespx">OOI</a>
+	
+  </div>
+</div>	
+	<a href="httity/" class="intra-box">Intranet</a>
+	<a href="/sispx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="hspx" class="box-title"><br /><i class="fad fa-microscope fa-3x"></i><br /><br /> Research</a>
+	<a href="htrch/" class="intra-box">Intranet</a>
+	<a href="/sspx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sh" class="box-title"><br /><i class="fad fa-user-hard-hat fa-3x"></i><br /><br />Safety &amp; Health</a>
+	<a href="httml" class="intra-box">Intranet</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="httpx" class="box-title"><br /><i class="fad fa-sheep fa-3x"></i><br /><br />Sleep Services</a>
+	<a href="hspx" class="intra-box">Intranet</a>
+	<a href="/spx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/px" class="box-title"><br /><i class="fad fa-people-arrows fa-3x"></i><br /><br />Social Work</a>
+	<a href="http://vlwork/" class="intra-box">Intranet</a>
+	<a href="htts/122.aspx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sery" class="box-title"><br /><i class="fad fa-scalpel-path fa-3x"></i><br /><br />Surgery</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="/sitaspx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="/sith" class="box-title"><br /><i class="fad fa-webcam fa-3x"></i><br /><br />Telehealth</a>
+	<a href="httlth/" class="intra-box">Intranet</a>
+	<a href="#" class="policy-box">Policies</a>
+</div>
+	
+<div class="section-id">
+	<a class="box-title"><br /><i class="fad fa-hands-helping fa-3x"></i><br /><br />Voluntary Service</a>
+	<a class="intra-box">&nbsp;</a>
+	<a href="/sitpx" class="policy-box">Policies</a>
+</div>
+
+<div class="section-id">
+	<a href="httspx" class="box-title"><br /><i class="fas fa-watch-fitness fa-3x"></i><br /><br />Whole Health</a>
+	<a href="htth/" class="intra-box">Intranet</a>
+	<a class="policy-box">&nbsp;</a>
+</div>
+
+<div class="section-id">
+	<a href="/sitspx" class="box-title"><br /><i class="fas fa-venus fa-3x"></i><br /><br />Women's Health</a>
+	<a href="http:sHlth/" class="intra-box">Intranet</a>
+	<a class="policy-box">&nbsp;</a>
+</div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+function openNav1() {	
+  document.getElementById("myNav1").style.width = "100%";
+}
+
+function closeNav1() {
+  document.getElementById("myNav1").style.width = "0%";
+}	
+function openNav2() {	
+  document.getElementById("myNav2").style.width = "100%";
+}
+
+function closeNav2() {
+  document.getElementById("myNav2").style.width = "0%";
+}
+function openNav3() {	
+  document.getElementById("myNav3").style.width = "100%";
+}
+
+function closeNav3() {
+  document.getElementById("myNav3").style.width = "0%";
+}	
+</script>
