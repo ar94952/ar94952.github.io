@@ -220,28 +220,59 @@ body, html {
 }
 
 .layer8 {
-  width: 80%;
-  height: 70%;
+  width: 85%;
+  height: 73%;
   background-color: white;
   z-index: -3;
   position: absolute;
-  left: 10%;
-  top: 25%;
+  left: 7.5%;
+  top: 22%;
   box-shadow: 2px 2px 6px rgb(82, 82, 82);
-  animation: 3s ease-in 0s 1 slideInFromBottom6;
+  animation: 2.5s ease-in 0s 1 slideInFromBottom6;
+}
+
+@media only screen and (max-width: 900px) {
+  /* For mobile phones: */
+  .layer8 {
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* For mobile phones: */
+  #tinyscreen.codepen {
+    width: 100%;
+    height: 60%;
+    left: 0;
+    margin:0;
+  }
+}
+
+.codepen {
+  height: 300; 
+  box-sizing: border-box; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 
 .lay8 {
   width: 100%;
   height: 100%;
-  padding: 50px;
+  
 }
 
-.lay8 img{
-  box-shadow: 2px 2px 6px rgb(82, 82, 82);
+#tinyscreen {
+  
+  width: 30%; 
+  height: 40%; 
+  float: left; 
+  margin-right: 20px; 
   margin-left: 20px;
-  margin-right: 20px;
-  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -265,8 +296,8 @@ body, html {
     margin: auto;
     padding: 70px;
     border: 1px solid #888;
-    width: 563px;
-    height: 750px;
+    width: 663px;
+    height: 850px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -349,7 +380,7 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -10;
-  min-width: 1300px;
+  min-width: 1900px;
   max-width: 3840px;
   max-height: 1080px;
 }  
@@ -362,7 +393,7 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -9;
-  min-width: 1300px;
+  min-width: 1900px;
   max-width: 3840px;
   max-height: 1080px;
 }
@@ -375,7 +406,7 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -8;
-  min-width: 1300px;
+  min-width: 1900px;
   max-width: 3840px;
   max-height: 1080px;
 }
@@ -388,7 +419,7 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -7;
-  min-width: 1300px;
+  min-width: 1900px;
   max-width: 3840px;
   max-height: 1080px;
 }
@@ -401,7 +432,7 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -6;
-  min-width: 1300px;
+  min-width: 1900px;
   max-width: 3840px;
   max-height: 1080px;
 }
